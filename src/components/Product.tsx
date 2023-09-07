@@ -30,8 +30,8 @@ export default function Product({
       <div className="flex">
         {Array(rating)
           .fill(0)
-          .map(() => (
-            <StarIcon className="h-5 text-yellow-400" />
+          .map((_, i) => (
+            <StarIcon key={i} className="h-5 text-yellow-400" />
           ))}
       </div>
 
