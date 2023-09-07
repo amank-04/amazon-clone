@@ -17,7 +17,13 @@ export default function Product({
         {category}
       </p>
 
-      <Image className="mx-auto" alt="" height={200} width={200} objectFit="contain" src={image} />
+      <Image
+        className="mx-auto object-contain"
+        alt=""
+        height={200}
+        width={200}
+        src={image}
+      />
 
       <h4 className="my-3">{title}</h4>
 
@@ -36,11 +42,11 @@ export default function Product({
       {hasPrime && (
         <div className="flex items-center space-x-2 mb-2">
           <Image
+            className="object-contain"
             alt=""
             height={50}
             width={50}
             src="https://m.media-amazon.com/images/G/31/marketing/prime/detail_page/checkPrime._CB483586779_.png"
-            objectFit="contain"
           />
           <p className="text-xs text-gray-500">Free Next-Day Dilevery</p>
         </div>
