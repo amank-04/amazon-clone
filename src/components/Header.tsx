@@ -1,4 +1,3 @@
-'use client'
 import Image from "next/image";
 import {
   MagnifyingGlassIcon,
@@ -6,7 +5,6 @@ import {
   Bars3Icon,
 } from "@heroicons/react/24/outline";
 import Link from "next/link";
-import { signIn, signOut } from "next-auth/react";
 
 export default function Header() {
   return (
@@ -32,7 +30,7 @@ export default function Header() {
         </div>
 
         <div className="flex items-center text-white space-x-5 mx-3">
-          <div onClick={() => signIn()} className=" cursor-pointer hover:underline">
+          <div className=" cursor-pointer hover:underline">
             <p className="text-xs">Hello, sign in</p>
             <p className="font-bold text-sm">Account & Lists</p>
           </div>
