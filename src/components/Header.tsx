@@ -8,10 +8,17 @@ import {
 import Link from "next/link";
 import { useAppSelector } from "@/redux/hooks";
 import { useSession, signIn, signOut } from "next-auth/react";
+import { useRouter } from "next/navigation";
 
 export default function Header() {
   const items = useAppSelector((state) => state.cart.items);
   const session = useSession();
+  const router = useRouter();
+
+  const handleLogIn = () => {
+    if (session.status === "authenticated") return signOut();
+    router.push("/api/auth/signin");
+  };
 
   return (
     <div className="">
@@ -37,8 +44,13 @@ export default function Header() {
         </div>
 
         <div className="flex items-center text-white space-x-5 mx-3">
-          <div onClick={() => session.status === 'authenticated' ? signOut() : signIn()} className=" cursor-pointer hover:underline">
-            <p className="text-xs">Hello, {session.data?.user ? session.data.user.name : `sign in`}</p>
+          <div
+            onClick={() => handleLogIn()}
+            className=" cursor-pointer hover:underline"
+          >
+            <p className="text-xs">
+              Hello, {session.data?.user ? session.data.user.name : `sign in`}
+            </p>
             <p className="font-bold text-sm">Account & Lists</p>
           </div>
           <div className=" cursor-pointer hover:underline">
