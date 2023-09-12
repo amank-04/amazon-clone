@@ -13,12 +13,12 @@ export default function Banner() {
         showStatus={false}
         showThumbs={false}
       >
-        <img src="https://m.media-amazon.com/images/I/61dN5ATmvqL._SX1500_.jpg" />
-        <img src="https://m.media-amazon.com/images/I/61lwJy4B8PL._SX3000_.jpg" />
-        <img src="https://m.media-amazon.com/images/I/71Ie3JXGfVL._SX3000_.jpg" />
-        <img src="https://m.media-amazon.com/images/I/71U-Q+N7PXL._SX3000_.jpg" />
-        <img src="https://m.media-amazon.com/images/I/81KkrQWEHIL._SX3000_.jpg" />
-        <img src="https://m.media-amazon.com/images/I/61zAjw4bqPL._SX3000_.jpg" />
+        <img alt="" src="https://m.media-amazon.com/images/I/61dN5ATmvqL._SX1500_.jpg" />
+        <img alt="" src="https://m.media-amazon.com/images/I/61lwJy4B8PL._SX3000_.jpg" />
+        <img alt="" src="https://m.media-amazon.com/images/I/71Ie3JXGfVL._SX3000_.jpg" />
+        <img alt="" src="https://m.media-amazon.com/images/I/71U-Q+N7PXL._SX3000_.jpg" />
+        <img alt="" src="https://m.media-amazon.com/images/I/81KkrQWEHIL._SX3000_.jpg" />
+        <img alt="" src="https://m.media-amazon.com/images/I/61zAjw4bqPL._SX3000_.jpg" />
       </Carousel>
     </div>
   );

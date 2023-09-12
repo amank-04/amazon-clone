@@ -66,7 +66,7 @@ export default function Header() {
 
         <div className="flex space-x-5">
           <p></p>
-          <p className="text-sm cursor-pointer">Today's Deal</p>
+          <p className="text-sm cursor-pointer">{"Today's Deal"}</p>
           <p className="text-sm cursor-pointer">Customer Service</p>
           <p className="text-sm cursor-pointer">Registry</p>
           <p className="text-sm cursor-pointer">Gift Cards</p>
