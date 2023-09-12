@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import {
   MagnifyingGlassIcon,
@@ -5,8 +6,13 @@ import {
   Bars3Icon,
 } from "@heroicons/react/24/outline";
 import Link from "next/link";
+import { useAppSelector } from "@/redux/hooks";
+import { useSession, signIn, signOut } from "next-auth/react";
 
 export default function Header() {
+  const items = useAppSelector((state) => state.cart.items);
+  const session = useSession();
+
   return (
     <div className="">
       {/* Top Navbar */}
@@ -16,6 +22,7 @@ export default function Header() {
             src="https://pngimg.com/uploads/amazon/amazon_PNG11.png"
             height={40}
             width={100}
+            style={{ width: "100px", height: "40px", objectFit: "contain" }}
             alt="logo"
           />
         </Link>
@@ -30,18 +37,23 @@ export default function Header() {
         </div>
 
         <div className="flex items-center text-white space-x-5 mx-3">
-          <div className=" cursor-pointer hover:underline">
-            <p className="text-xs">Hello, sign in</p>
+          <div onClick={() => session.status === 'authenticated' ? signOut() : signIn()} className=" cursor-pointer hover:underline">
+            <p className="text-xs">Hello, {session.data?.user ? session.data.user.name : `sign in`}</p>
             <p className="font-bold text-sm">Account & Lists</p>
           </div>
           <div className=" cursor-pointer hover:underline">
             <p className="text-xs">Returns</p>
             <p className="font-bold text-sm">& Orders</p>
           </div>
-          <div className="flex cursor-pointer hover:underline">
-            <ShoppingCartIcon className="h-10 w-10" />
-            <p className="font-bold text-xs pt-6">Cart</p>
-          </div>
+          <Link href="/cart" className="flex cursor-pointer hover:underline">
+            <div className="relative">
+              <ShoppingCartIcon className="h-10 w-10" />
+              <p className="absolute top-0 right-0 bg-yellow-400 text-center text-xs px-1 text-black rounded-full">
+                {items.length}
+              </p>
+            </div>
+            <p className="hidden md:inline font-bold text-xs pt-6">Cart</p>
+          </Link>
         </div>
       </div>
 

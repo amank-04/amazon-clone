@@ -2,7 +2,7 @@
 import Product from "./Product";
 const getProducts = async () => {
   const res = await fetch("https://fakestoreapi.com/products");
-  const products: Product[] = await res.json();
+  const products: ProductItem[] = await res.json();
   return products;
 };
 
