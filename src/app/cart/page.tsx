@@ -4,7 +4,7 @@ import CheckoutProduct from "@/components/CheckoutProduct";
 import { useAppSelector } from "@/redux/hooks";
 import { useSession } from "next-auth/react";
 
-export default function page() {
+export default function Cart() {
   const items = useAppSelector((state) => state.cart.items);
   const session = useSession();
   const cartTotal = useAppSelector((state) => state.cart.total)
