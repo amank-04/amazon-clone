@@ -2,7 +2,7 @@ import { db } from "@/../firebase";
 import moment from "moment";
 import { collection, getDocs, orderBy, query } from "firebase/firestore";
 import { getServerSession } from "next-auth";
-import { authOptions } from "@/app/api/auth/[...nextauth]/route";
+import { authOptions } from "@/app/utils/authOptions";
 
 export default async function Orders() {
   const data = await getServerSession(authOptions);
@@ -52,6 +52,7 @@ export default async function Orders() {
                     className="h-20 sm:h-32 object-contain"
                     key={image}
                     src={image}
+                    alt=""
                   />
                 ))}
               </div>

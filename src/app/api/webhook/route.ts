@@ -37,14 +37,12 @@ export async function POST(req: Request) {
   const webhookSecret = process.env.STRIPE_SIGNING_SECRET!;
   let event: Stripe.Event;
 
+  if (!signature || !webhookSecret)
+    return new Response("Sig or Secret not Found", { status: 400 });
   try {
-    if (!signature || !webhookSecret) return;
     event = stripe.webhooks.constructEvent(body, signature, webhookSecret);
   } catch (err) {
-    return new Response(
-      `Webhook Error: ${err instanceof Error ? err.message : "Unknown Error"}`,
-      { status: 400 }
-    );
+    return new Response("Webhook Error", { status: 400 });
   }
 
   // Handling the Checkout Session Completed
@@ -52,15 +50,7 @@ export async function POST(req: Request) {
     const session = event.data.object;
     return fullfilOrder(session)
       .then(() => new Response(null, { status: 200 }))
-      .catch(
-        (err) =>
-          new Response(
-            `Webhook Error: ${
-              err instanceof Error ? err.message : "Unknown Error"
-            }`,
-            { status: 400 }
-          )
-      );
+      .catch(() => new Response("Webhook Error", { status: 400 }));
   }
-  return new Response(null, { status: 200 });
+  return new Response("OK", { status: 200 });
 }

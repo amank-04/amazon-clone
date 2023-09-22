@@ -1,2 +1,5 @@
 import Success from "@/components/Success";
-export default () => <Success />;
+
+export default function Page() {
+  return <Success />;
+}
