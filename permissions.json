@@ -1,13 +1,14 @@
+// https://console.firebase.google.com/YOUR_FIREBASE_PROJECT_URL/settings/serviceaccounts/adminsdk
 {
-  "type": "service_account",
-  "project_id": "amazon-clone-398311",
-  "private_key_id": "e383d1cbc5ef6ff474baf38aa5ef130edb47c779",
-  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDBK0lOpJf7bp0F\nQkpqr1UsPe0IUqicEbGZgoHl/WnKBuXuqjdkHcFQTyzTga4MiOvYO87vVcjkniXF\nivVYWh20E83fW5whyqRhruPLGZGqH4auoBdPBShbsBu61NEp0oCwX2o5fESIwm33\nwBVGcgXeBrtY5wvi1wRp4nKg7TzX81iN+9vZCdnOZ14Dh2RIyku6cqxclfEmjNjv\nZJRBPDDbmVjQMzjDWW/KffQu6WfQcdUrW0Lnzxg0jASQzb1xs9MTViYNeZomwJQN\nNOk+jNhc6xtz7oTRo5LI5nVSkUc3K8upidom9oZwH3GybgRbd17thIFGxI+T6+RE\nytd4bfb1AgMBAAECggEADYgpv3+aQfvSth6ZtfWIYuwHodCgjSZUKavRy7m/4m4v\nR1PXQ4UuGKEjQ8HO3oPs+Z3e9jctNo65mKgOXd0aPZYxktcJDfjzIQCuZnjpEmDY\n/3yphViYJiwlFSZ5bJOZfkGA4HwLFQWBzJxBIUk1jgMstqKg24gyf/RkEU/tNjdv\naTG+Nv8IppoGkWOb3Wq0wglu4/0Ucf6Mt1R39Ikd5KjE75r5tWlpSUetZZl3IMiL\nIM2gcYOYn0l8498iRF/dBD/j/zo4UGKBtFEZ5FITJiiN4mJ8FdZf1DS16FzifZqc\nVpdnhBm5OnrGlEaanrmFKYdZxoitwPbGIoLkKcKMgQKBgQD+cEjqrTPdaDF4XpLx\nHkVCHP1vSV6ZGDhmfmFLtMk2BiQzIuLcepTNc1piOO5e51dijaEjsxT/jpr2iFiX\nt+KIj06MzeGtL2hWfyJLGHFFce7JdToZhox7eZTOQA/T8hTUZyfodxuwEOe8l001\nezXlBDBWhTmHBcW30wo5xsNiFQKBgQDCWr++jfY8Um7ubndc+L+wTMLAM7oGMb0S\nQo2qvnaGTiTRWFazI4NMfDjjlHY6BbonJtuQndWwxX8RozGc2/3vHeFVKEXtJ8+t\nFl0294yFIcJ+VBxGsirLG4rbe9msOwwKNPVe82yUOk2sklXmDeqbQQM9jdO65lWC\naY3V67rZYQKBgBbLGk0jrQTFo8DjwAgnrQ6qKC4DBZ1zZQIRikfM70WOsUl/c5FK\nze/FyLAJ55jK4rIqe+gFz/jA3rL9LeqRh5KyO9gzTWdFWvR8uSa/Ds6o0Tps7QKC\nYi1hi+oaJRDYm/MXNqUFno5cRVZIu5rx6bcVc/scPjYRV1ALcNwSKUitAoGAdQ3Q\n9ARuLBB9zU5sx2rtkFH67WV6AWcNd6Try80gd20zEX6B4SxfVL5wSOjOd82hOxlV\nHflhjTC1gjrmk5GPk+dMIky6KMZUduvEQmm/kSMvD4S67v05dtBkxiIGjIuXicIx\nkflMCM5An9IWuBLjnJQATp9PyP4WvA+0pAVwqKECgYEAgv8OoDY045WQ4Uu6KqqL\nabcsQamgY9q5CDBTt/XLfQ5Kx4kGUc48AlamOFogJ5/x1nP4uPaeOToP2R9fHSA5\nnaWlZoPyRCtFf5yM9fAanYpuLksQVn//0P2ZJi/jZVY2JeDudRANL2tWbDXyZw3X\n/F/wkd8/t6Zv8MdKWf8zgsg=\n-----END PRIVATE KEY-----\n",
-  "client_email": "firebase-adminsdk-brtul@amazon-clone-398311.iam.gserviceaccount.com",
-  "client_id": "116304950867118742181",
-  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
-  "token_uri": "https://oauth2.googleapis.com/token",
-  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
-  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-brtul%40amazon-clone-398311.iam.gserviceaccount.com",
-  "universe_domain": "googleapis.com"
+  "type": XXXX,
+  "project_id": XXXX,
+  "private_key_id": XXXX,
+  "private_key": XXXX,
+  "client_email": XXXX,
+  "client_id": XXXX,
+  "auth_uri": XXXX,
+  "token_uri": XXXX,
+  "auth_provider_x509_cert_url": XXXX,
+  "client_x509_cert_url": XXXX,
+  "universe_domain": XXXX
 }
