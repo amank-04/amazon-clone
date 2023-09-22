@@ -8,3 +8,10 @@ interface ProductItem {
   hasPrime: boolean!;
   rating: number!;
 }
+
+interface Order {
+  id: string!;
+  amount: number!;
+  images: string[]!;
+  timestamp: number!;
+}

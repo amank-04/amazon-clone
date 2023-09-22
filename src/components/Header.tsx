@@ -7,7 +7,7 @@ import {
 } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import { useAppSelector } from "@/redux/hooks";
-import { useSession, signIn, signOut } from "next-auth/react";
+import { useSession, signOut } from "next-auth/react";
 import { useRouter } from "next/navigation";
 
 export default function Header() {
@@ -27,6 +27,7 @@ export default function Header() {
         <Link href="/" className="m-3 pt-2">
           <Image
             src="https://pngimg.com/uploads/amazon/amazon_PNG11.png"
+            priority
             height={40}
             width={100}
             style={{ width: "100px", height: "40px", objectFit: "contain" }}
@@ -53,10 +54,10 @@ export default function Header() {
             </p>
             <p className="font-bold text-sm">Account & Lists</p>
           </div>
-          <div className=" cursor-pointer hover:underline">
+          <Link href="/orders" className=" cursor-pointer hover:underline">
             <p className="text-xs">Returns</p>
             <p className="font-bold text-sm">& Orders</p>
-          </div>
+          </Link>
           <Link href="/cart" className="flex cursor-pointer hover:underline">
             <div className="relative">
               <ShoppingCartIcon className="h-10 w-10" />
