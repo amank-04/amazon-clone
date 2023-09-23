@@ -3,6 +3,7 @@ import moment from "moment";
 import { collection, getDocs, orderBy, query } from "firebase/firestore";
 import { getServerSession } from "next-auth";
 import { authOptions } from "@/app/utils/authOptions";
+import Link from "next/link";
 
 export default async function Orders() {
   const data = await getServerSession(authOptions);
@@ -15,9 +16,14 @@ export default async function Orders() {
         Your Orders
       </h1>
       <h2>
-        {email?.length > 0
-          ? `${orders.length} Orders`
-          : `Please Sign in to see orders`}
+        {email?.length > 0 ? (
+          `${orders.length} Orders`
+        ) : (
+          <div>
+            Please <Link className="text-blue-600 hover:underline" href="/api/auth/signin">Sign in</Link> {""}in to see
+            orders
+          </div>
+        )}
       </h2>
 
       <div className="mt-5 space-y-2">
@@ -26,21 +32,25 @@ export default async function Orders() {
             {/* Top */}
             <div className="flex items-center space-x-10 text-sm text-gray-600 bg-gray-100 p-5">
               <div>
-                <p className="font-bold text-xs">ORDER PLACE</p>
-                <p>{moment.unix(order.timestamp).format("DD MMM YYYY")}</p>
+                <p className="font-bold text-xs whitespace-nowrap">
+                  ORDER PLACE
+                </p>
+                <p className="whitespace-nowrap">
+                  {moment.unix(order.timestamp).format("DD MMM YYYY hh:mm")}
+                </p>
               </div>
 
               <div>
                 <p className="font-bold text-xs">Total</p>
-                <p>$ {order.amount}</p>
+                <p>${order.amount}</p>
               </div>
 
-              <div className="text-sm whitespace-nowrap sm:text-xl self-end flex-1 text-right text-blue-500">
+              <div className="text-sm whitespace-nowrap sm:text-xl self-end flex-1 pb-2 text-right text-blue-500">
                 <p>{order.images.length} items</p>
               </div>
             </div>
 
-            <p className="absolute top-2 right-2 w-40 lg:w-72 truncate text-xs whitespace-nowrap">
+            <p className="absolute top-1 right-1 w-40 lg:w-72 truncate text-xs whitespace-nowrap">
               ORDER #{order.id}
             </p>
 

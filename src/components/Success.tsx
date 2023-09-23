@@ -5,9 +5,9 @@ export default function Success() {
   return (
     <div className="max-w-screen-lg mx-auto">
       <div className="flex flex-col p-10 bg-white space-y-5">
-        <div className="flex items-center space-x-2">
-          <CheckCircleIcon className="text-green-500 h-10" />
-          <h1 className="text-3xl">Thank you, your order has been placed!</h1>
+        <div className="flex items-center space-x-1">
+          <CheckCircleIcon className="text-green-500 h-8 sm:h-10" />
+          <h1 className="text-2xl sm:text-3xl">Order Placed, thanks!</h1>
         </div>
 
         <p>

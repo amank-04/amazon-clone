@@ -57,7 +57,7 @@ export default function Cart() {
               disabled={session.status === "unauthenticated"}
               className={`button mt-2 ${
                 session.status === "unauthenticated" &&
-                "from-gray-300 to-gray-500 border-gray-200 text-gray-300 cursor-not-allowed"
+                "from-gray-300 to-gray-500 border-gray-200 text-gray-300 cursor-not-allowed active:from-gray-300 active:to-gray-500"
               }`}
             >
               {session.status === "authenticated"

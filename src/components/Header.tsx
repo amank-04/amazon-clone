@@ -24,13 +24,13 @@ export default function Header() {
     <div className="">
       {/* Top Navbar */}
       <div className="bg-amazon_blue flex items-center justify-between">
-        <Link href="/" className="m-3 pt-2">
+        <Link href="/" className="p-2 mt-1 sm:p-3">
           <Image
             src="https://pngimg.com/uploads/amazon/amazon_PNG11.png"
             priority
-            height={40}
+            height={20}
             width={100}
-            style={{ width: "100px", height: "40px", objectFit: "contain" }}
+            style={{ width: "80px", height: "40px", objectFit: "contain" }}
             alt="logo"
           />
         </Link>
@@ -71,19 +71,21 @@ export default function Header() {
       </div>
 
       {/* Bottom Navbar */}
-      <div className="flex bg-amazon_blue-light text-white items-center p-2">
+      <div className="flex bg-amazon_blue-light text-white items-center p-2 overflow-x-scroll scrollbar-hide">
+  
+        {/* For Bigger Screen */}
         <div className="flex items-center cursor-pointer">
           <Bars3Icon className="h-7" />
           <p className="text-sm font-bold">All</p>
         </div>
 
-        <div className="flex space-x-5">
+        <div className="flex items-center space-x-5">
           <p></p>
-          <p className="text-sm cursor-pointer">{"Today's Deal"}</p>
-          <p className="text-sm cursor-pointer">Customer Service</p>
-          <p className="text-sm cursor-pointer">Registry</p>
-          <p className="text-sm cursor-pointer">Gift Cards</p>
-          <p className="text-sm cursor-pointer">Sell</p>
+          <span className="text-sm cursor-pointer whitespace-nowrap">{"Today's Deal"}</span>
+          <span className="text-sm cursor-pointer whitespace-nowrap">Customer Service</span>
+          <span className="text-sm cursor-pointer whitespace-nowrap">Registry</span>
+          <span className="text-sm cursor-pointer whitespace-nowrap">Gift Cards</span>
+          <span className="text-sm cursor-pointer whitespace-nowrap">Sell</span>
         </div>
       </div>
     </div>

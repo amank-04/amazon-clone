@@ -22,7 +22,7 @@ export default function CheckoutProduct({
         width={200}
         height={200}
       />
-      <div className="col-span-3 mx-5">
+      <div className="col-span-4 sm:col-span-3 mx-5">
         <p className="my-3">{title}</p>
 
         <div className="flex">
@@ -34,7 +34,7 @@ export default function CheckoutProduct({
         </div>
 
         <p className="line-clamp-2 text-xs my-2">{description}</p>
-        <p className="mb-2">{"$" + price}</p>
+        <p className="mb-2">{"$" + price}</p> 
 
         {hasPrime && (
           <div className="flex items-center space-x-2 mb-2">
@@ -50,7 +50,7 @@ export default function CheckoutProduct({
           </div>
         )}
       </div>
-      <button onClick={() => removeItemFromCart()} className="button">
+      <button onClick={() => removeItemFromCart()} className="button col-span-5 sm:col-span-1">
         {" "}
         Remove From Cart
       </button>
