@@ -30,13 +30,13 @@ export default async function Orders() {
         {orders.map((order) => (
           <div key={order.id} className="relative border rounded-md">
             {/* Top */}
-            <div className="flex items-center space-x-10 text-sm text-gray-600 bg-gray-100 p-5">
+            <div className="flex space-x-10 text-sm text-gray-600 bg-gray-100 p-5">
               <div>
                 <p className="font-bold text-xs whitespace-nowrap">
                   ORDER PLACE
                 </p>
-                <p className="whitespace-nowrap">
-                  {moment.unix(order.timestamp).format("DD MMM YYYY hh:mm")}
+                <p>
+                  {moment.unix(order.timestamp).format("DD/MM/YY")}
                 </p>
               </div>
 
